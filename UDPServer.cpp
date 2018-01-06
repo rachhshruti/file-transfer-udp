@@ -106,7 +106,7 @@ void UDPServer::setClientSockLength()
 
 int UDPServer::receiveRequest()
 {
-       	int noOfCharacters = recvfrom(serverSocket,buff,1024,0,(struct sockaddr *)&clientAddress,&clientSockLen);	       	
+    int noOfCharacters = recvfrom(serverSocket,buff,1024,0,(struct sockaddr *)&clientAddress,&clientSockLen);
 	if (noOfCharacters < 0) 
 	{
 		displayError("There is some problem in receiving the request!");
@@ -151,7 +151,7 @@ string* UDPServer::processRequest()
 		statusCode="400";
 	}
 	string* values=new string[3];
-	values[0]=filename;
+	values[0]="files/"+string(filename);
 	values[1]=httpVersion;
 	values[2]=statusCode;
 	return values;

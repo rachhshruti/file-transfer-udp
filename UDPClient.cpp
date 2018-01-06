@@ -207,8 +207,8 @@ int main(int noOfArguments,char *argumentList[])
 {
 	UDPClient client;
 	/*
-         * It checks if all the command-line arguments are provided.
-         */	
+     * It checks if all the command-line arguments are provided.
+     */	
 	if(noOfArguments<4)
 	{
 		client.displayError("Invalid arguments!");
